@@ -87,7 +87,7 @@ Detemines the position of the indicator.
 ## Slider
 ![image](https://github.com/user-attachments/assets/f22fa70d-76bb-4393-a963-9ef8e5e4326b)
 
-An slider is drawn using the generic add object block, where from the drop down `slider` is selected.
+A slider is drawn using the generic add object block, where from the drop down `slider` is selected.
 
 ![add_slider](https://github.com/user-attachments/assets/9020a5e0-fbf9-43de-8a7e-7d74cc308aa0)
 
@@ -108,21 +108,97 @@ Detemines the position of the indicator.
 ## Bar
 ![image](https://github.com/user-attachments/assets/12bfc7c6-257c-4b7d-8e1a-c64a6a24c759)
 
+A bar is drawn using the generic add object block, where from the drop down `bar` is selected.
+
 ## Led
 ![image](https://github.com/user-attachments/assets/71031ef4-ddac-4011-b372-3426495f442a)
+
+The value of a led (wther it is on or off) avn be set by the `set_val` block with a boolena as argument:
+
+![set_val](https://github.com/user-attachments/assets/467a0674-3209-42e0-96c2-d83671495cd3)
+
+The brightness of an led widget is determined by using the properties block:
+
+![set_brightness](https://github.com/user-attachments/assets/825aea54-84b7-4e6d-af1c-e06dc652f5a6)
 
 ## Switch
 ![image](https://github.com/user-attachments/assets/c7d51e6b-61fc-4c00-9d15-f3297859baf6)
 
-## List
-![image](https://github.com/user-attachments/assets/81164ee9-2119-41b7-9d29-416cbba2b957)
+A switch is drawn using the generic add object block, where from the drop down `switch` is selected.
+
+When a switch is toggled in the GUI, an event is generated and the value of the switch can be read using:
+
+![get_val](https://github.com/user-attachments/assets/1c946273-e200-461f-a84f-5f5ec4ed086d)
+
+Sometimes, you want the switch in an initial position. for this you use the `set_val` block 
+
+![set_val](https://github.com/user-attachments/assets/335d00e4-2c0d-4ac1-bc0d-e0dfed6afeae)
+
+Where the parameter is a boolean.
+
 
 ## Roller
 ![image](https://github.com/user-attachments/assets/aa05cb08-553a-4405-8b59-302ebd7c505d)
 
+A roller is drawn using the generic add object block, where from the drop down `roller` is selected.
+
+![add_roller](https://github.com/user-attachments/assets/d5562999-eaa2-4977-8786-fb7ac6391438)
+
+Once a roller is added, it will show some default options. These can be overridden by using the `set_text` block
+
+![roller_set_text](https://github.com/user-attachments/assets/31185a84-6669-4012-b111-8701d7ded333)
+
+When a value is selected in a roller, an event is created and the string of the selected line is returned with the `get_event`.
+
+![get_val](https://github.com/user-attachments/assets/d4b4c264-e284-485a-bca0-791eb875abb5)
 
 
 
+# More complicated widgets
 
+The following widgets are more complex in nature and make use of the `set [] parent [ ]` block, which allows to determine the hierarchy of one widgets to another. The container widgets `list`, `tabview` and `tileview` are widgets that can act as a parent for widgtes like `buttons` or `labels', etc.
 
+## List
+![image](https://github.com/user-attachments/assets/81164ee9-2119-41b7-9d29-416cbba2b957)
 
+A list is drawn using the generic add object block, where from the drop down `list` is selected.
+
+![add_list](https://github.com/user-attachments/assets/0d454826-9c53-4a3f-97ac-65cb5d062eee)
+
+When a list is added, you will see an empty area. Now you can add other widgets to the list by setting their parent field to the list name.
+
+![add_button_to_list](https://github.com/user-attachments/assets/a256ffd7-816e-4f94-8206-82d05b03cfbb)
+
+Another way of adding widgets to a list, is by using the `set_parent` blcok on an existing widget to add it to a list.
+
+## Tabview
+The Tab view object can be used to organize content in tabs. Look in hte lVGL documentation for an [example of a tabview](https://docs.lvgl.io/9.2/widgets/tabview.html#simple-tabview).
+
+You start by creating a tabview.
+
+![add_tabview](https://github.com/user-attachments/assets/cdcb7447-443e-4385-8023-03aa42499e82)
+
+You do no see anything happening until you ad a new tab using
+
+![add_tab](https://github.com/user-attachments/assets/974232de-90d4-4857-9ef8-3bd775db1b6d)
+
+Where the parent refers to the tabview's name.
+
+Once a tab is created, any widget can be added to the tab by setting the `parent` to the specific tab's name.
+
+## Tileview
+The Tile view is a container object whose elements (called tiles) can be arranged in grid form. A user can navigate between the tiles by swiping. Any direction of swiping can be disabled on the tiles individually to not allow moving from one tile to another.
+
+If the Tile view is screen sized, the user interface resembles what you may have seen on smartwatches. Look in the LVGL documentation for an [example of a tileview](https://docs.lvgl.io/9.2/widgets/tileview.html#tileview-with-content)
+
+You start by creating a tileview.
+
+![add_tileview](https://github.com/user-attachments/assets/ca574587-1030-46bb-b408-a0ce31e0392a)
+
+Within this tileview new tiles can be created using
+
+![add_tile](https://github.com/user-attachments/assets/5981c89f-da71-468f-8db0-73a00c883ac5)
+
+As a parent you take the `tileview` name that was created before. A new tile is created on column `col` and row `row`. The booleans define whethe you can swipe in the directory (left, right, top, bottom) to reach a next tile.
+
+Once a tile is created, any widget can be added to the tile by setting the `parent` to the specific tile's name.
