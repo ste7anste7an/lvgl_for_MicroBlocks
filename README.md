@@ -8,6 +8,12 @@ LVGL (Light and Versatile Graphics Library) is a GUI library for embedded system
 
 LVGL is a complex library that offers a wide variety of widgets. Each widget supports numerous style settings and configuration options. One of the strengths of MicroBlocks is its self-explanatory nature, where the blocks clearly convey their function. We have aimed to stay as close to that principle as possible in this integration.
 
+## Firmware
+Currently we have a pre-compiled firmware for the M5Stack Core 2 platform. The [firmware can be downloaded](https://github.com/ste7anste7an/smallvm_lms/raw/refs/heads/dev/lvgl_mb/firmware/firmware_MicroBlocks_LVGL_m5core2-lvgl_20250615-154059.bin) from the projects github and once downloaded, it can be dragged in the IDE when an M5Stack Core2 is connected via USB.
+
+## Library
+You need to add the LVGL library to Microblocks. Download the `lvgl.ubl` [library from the github](https://github.com/ste7anste7an/smallvm_lms/raw/refs/heads/dev/lvgl_mb/microblocks/lvgl.ubl) and drag in into the library area in de IDE.
+
 # LVGL library
 ## Objects
 In MicroBlcoks all widgets objects have a name. The name is used to reference its objects. If you create a button with name `btn`, than you can use the name `btn` to set its position, change it's size and change it's text. The objects are internally stored in a map in which the objects are indexed with their names. 
