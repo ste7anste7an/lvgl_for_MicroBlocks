@@ -20,7 +20,7 @@ You need to add the LVGL library to Microblocks. Download the `lvgl.ubl` [librar
 
 ## Examples
 
-Some example code that can be run on an M5Stack Cre 2 without additional hardware, can be found in the [M5core 2 LVGL directory](https://github.com/ste7anste7an/smallvm_lms/tree/dev/lvgl_mb/microblocks/m5core2).
+Some example code that can be run on an M5Stack Cre 2 without additional hardware, can be found in the [M5core 2 LVGL example directory](https://github.com/ste7anste7an/smallvm_lms/tree/dev/lvgl_mb/microblocks/m5core2).
 
 # LVGL library
 ## Objects
