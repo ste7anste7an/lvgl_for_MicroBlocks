@@ -208,3 +208,46 @@ Within this tileview new tiles can be created using
 As a parent you take the `tileview` name that was created before. A new tile is created on column `col` and row `row`. The booleans define whethe you can swipe in the directory (left, right, top, bottom) to reach a next tile.
 
 Once a tile is created, any widget can be added to the tile by setting the `parent` to the specific tile's name.
+
+# Events
+
+## Manual event handling
+The following widgets generate an event when their value changes: button, arc, slider, switch, and roller. When an event occurs, the message `LVGLevent` is broadcasted. So the first way to handle such an event is to wait for this broadcast:
+
+![when_lvglevent](https://github.com/user-attachments/assets/f6e4f228-a6ca-4533-b268-bdff8ba824fd)
+
+There is also a boolean function `event_available` that can be used in a `when` block:
+
+![when_lvglevent](https://github.com/user-attachments/assets/f6e4f228-a6ca-4533-b268-bdff8ba824fd)
+
+When the evwnt is caught, the function
+
+![get_event](https://github.com/user-attachments/assets/7434fba7-9afe-4d46-aee7-d93dcd0f5cf6)
+
+returns the name of the widget that caused the event. Within the `When` clause, we can check the which widget caused the event and handle appriately by reading the value of the widget.
+
+The following event handler check whether a button `button` is pressed . It calls a function to handle accordingly, or it checks wether an `arc` widget changed its value and stores the value of the `arc` in a global variable.
+
+![handle_event-button_arc](https://github.com/user-attachments/assets/795acefd-a91f-4c16-8411-c9666241ed87)
+
+## Integrated event handling
+
+We provide three helper function blocks for handling events in a more integrated way.
+
+![init_callback](https://github.com/user-attachments/assets/d947283c-d000-4a1a-a077-b12fbb66a4f2)
+
+Initializes the callback handling. This should be called once at the beginning of the program.
+
+![add-callback](https://github.com/user-attachments/assets/59c0c7bf-2a9c-44ec-b4cd-d90c084bba36)
+
+This block add an event call back function to a widget's name. The function must be defined as a `command block` and it's name is eneterd as a string. Every widget that creates an event should have it's own callback function.
+
+![handle_event](https://github.com/user-attachments/assets/80e111e6-5787-4d54-8a01-51341a47ced1)
+
+The evnthandler itself is called n the `When ` block that checks for new events. As an argument the `get_event` is passed.
+
+Below is an example program that shows how to handle different event with each their own callback function.
+
+![example_event_handler](https://github.com/user-attachments/assets/8391e205-cda1-45d4-8e07-5dd077f78bca)
+
+
