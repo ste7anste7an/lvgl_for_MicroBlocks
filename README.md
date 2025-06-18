@@ -12,7 +12,7 @@ LVGL is a complex library that offers a wide variety of widgets. Each widget sup
 Currently we have a pre-compiled firmware for the M5Stack Core 2 platform. The [firmware can be downloaded](https://github.com/ste7anste7an/smallvm_lms/raw/refs/heads/dev/lvgl_mb/firmware/firmware_MicroBlocks_LVGL_m5core2-lvgl_20250615-154059.bin) from the projects github and once downloaded, it can be dragged in the IDE when an M5Stack Core2 is connected via USB.
 
 ## Library
-You need to add the LVGL library to Microblocks. Download the `lvgl.ubl` [library from the github](https://github.com/ste7anste7an/smallvm_lms/raw/refs/heads/dev/lvgl_mb/microblocks/lvgl.ubl) and drag in into the library area in de IDE.
+You need to add the LVGL library to Microblocks. Download the `lvgl.ubl` [library from the github](https://github.com/ste7anste7an/smallvm_lms/raw/refs/heads/dev/lvgl_mb/microblocks/lvgl.ubl) and drag in into the library area in the IDE.
 
 # LVGL library
 ## Objects
