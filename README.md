@@ -8,6 +8,10 @@ LVGL (Light and Versatile Graphics Library) is a GUI library for embedded system
 
 LVGL is a complex library that offers a wide variety of widgets. Each widget supports numerous style settings and configuration options. One of the strengths of MicroBlocks is its self-explanatory nature, where the blocks clearly convey their function. We have aimed to stay as close to that principle as possible in this integration.
 
+The LVGL version of MicrobBlocks can be found on [this github](https://github.com/ste7anste7an/smallvm_lms). For fast screen processing, we needed a DMA capable graphics library. Unfortunaltely, the Adafruit GFX library does not support DMA. The graphics has been converted to [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI/) that uses double buffering with DMA. Furthermore, PSRAM is used for storing large display buffers.
+
+The LVGL MicroBlocks version still supports all the functions from the original version.
+
 ## Firmware
 Currently we have a pre-compiled firmware for the M5Stack Core 2 platform. The [firmware can be downloaded](https://github.com/ste7anste7an/smallvm_lms/raw/refs/heads/dev/lvgl_mb/firmware/firmware_MicroBlocks_LVGL_m5core2-lvgl_20250615-154059.bin) from the projects github and once downloaded, it can be dragged in the IDE when an M5Stack Core2 is connected via USB.
 
