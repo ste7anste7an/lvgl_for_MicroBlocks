@@ -18,6 +18,10 @@ Currently we have a pre-compiled firmware for the M5Stack Core 2 platform. The [
 ## Library
 You need to add the LVGL library to Microblocks. Download the `lvgl.ubl` [library from the github](https://github.com/ste7anste7an/smallvm_lms/raw/refs/heads/dev/lvgl_mb/microblocks/lvgl.ubl) and drag in into the library area in the IDE.
 
+## Examples
+
+Some example code that can be run on an M5Stack Cre 2 without additional hardware, can be found in the [M5core 2 LVGL directory](https://github.com/ste7anste7an/smallvm_lms/tree/dev/lvgl_mb/microblocks/m5core2).
+
 # LVGL library
 ## Objects
 In MicroBlcoks all widgets objects have a name. The name is used to reference its objects. If you create a button with name `btn`, than you can use the name `btn` to set its position, change it's size and change it's text. The objects are internally stored in a map in which the objects are indexed with their names. 
