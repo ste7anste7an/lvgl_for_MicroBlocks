@@ -26,7 +26,8 @@
 - [Tileview](#tileview)
 
 [Events](#events)
--[Manual event handling](#manual-event-handling)
+- [Manual event handling](#manual-event-handling)
+- [Integrated event handling](#integrated-event-handling)
 
 
 # Introduction
