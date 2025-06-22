@@ -7,6 +7,7 @@
 - [Firmware](#firmware)
 - [Library](#library)
 - [Examples](#examples)
+  
 [LVGL library](#lvgl-library)
 - [Objects](#objects)
 - [General modifiers](#general-modifiers)
@@ -18,7 +19,15 @@
 - [Led](#led)
 - [Switch](#switch)
 - [Roller](#roller)
+  
 [More complicated widgets](#more-complicated-widgets)
+- [List](#list)
+- [Tabview](#tabview)
+- [Tileview](#tileview)
+
+[Events](#events)
+-[Manual event handling](#manual-event-handling)
+
 
 # Introduction
 
