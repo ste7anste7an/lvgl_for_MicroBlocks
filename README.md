@@ -1,7 +1,27 @@
 # LVGL for MicroBlocks
-## Introduction
 
-Introduction
+## Table of Content
+
+[Introduction](#introduction)
+- [Integration in MicroBlocks](#integration-in-microblocks)
+- [Firmware](#firmware)
+- [Library](#library)
+- [Examples](#examples)
+[LVGL library](#lvgl-library)
+- [Objects](#objects)
+- [General modifiers](#general-modifiers)
+- [Button](#button)
+- [Label](#label)
+- [Arc](#arc)
+- [Slider](#slider)
+- [Bar](#bar)
+- [Led](#led)
+- [Switch](#switch)
+- [Roller](#roller)
+[More complicated widgets](#more-complicated-widgets)
+
+# Introduction
+
 LVGL (Light and Versatile Graphics Library) is a GUI library for embedded systems with a graphical display and some form of input (such as a touchscreen, rotary encoder, etc.). It helps create attractive user interfaces, with the logic and rendering handled entirely by the LVGL library. The user only needs to focus on the layout and responds to events triggered by user interactions.
 
 ## Integration in MicroBlocks
